@@ -109,6 +109,8 @@ void showNumberHexEx(uint16_t num, uint8_t dots, int leading_zero, uint8_t lengt
 
 void showNumberBaseEx(int8_t base, uint16_t num, uint8_t dots, int leading_zero, uint8_t length, uint8_t pos) {
 	int16_t i;
+	int negative;
+	uint8_t digits[4];
 	negative = 0;
 	if (base < 0) {
 		base = -base;
@@ -221,7 +223,7 @@ int writeByte(uint8_t b){
  }
 
 void showDots(uint8_t dots, uint8_t* digits){
-	int16_t i;
+    int16_t i;
     for(i = 0; i < 4; ++i)
     {
         digits[i] |= (dots & 0x80);
