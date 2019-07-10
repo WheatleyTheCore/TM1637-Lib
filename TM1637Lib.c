@@ -6,10 +6,6 @@
 /*-----------------------------------------------------------------------*
 
 	Place your 'C' library code here.
-	I don't know what I'm doing please send help  
-	
-	im commenting literally every line of this
-	because I'm confused by literally all of it 
 	
 	THIS IS A PORT OF 
 	https://github.com/WheatleyTheCore/Processo-Expert-Nunchuk-Lib/blob/master/NunchukLib.c
@@ -223,7 +219,7 @@ int writeByte(uint8_t b){
  }
 
 void showDots(uint8_t dots, uint8_t* digits){
-    int16_t i;
+	int16_t i;
     for(i = 0; i < 4; ++i)
     {
         digits[i] |= (dots & 0x80);
